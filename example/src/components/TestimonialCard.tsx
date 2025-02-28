@@ -26,7 +26,7 @@ export function TestimonialCard({
   content,
 }: TestimonialProps) {
   return (
-    <div className="w-80 space-y-3 rounded-lg bg-white px-5 py-3 text-sm shadow-sm">
+    <div className="w-80 space-y-3 rounded-lg bg-white px-5 py-3 text-sm shadow-xs">
       <div className="flex items-center gap-2">
         <img src={avatar} alt={name} className="size-8 rounded-full" />
         <div>

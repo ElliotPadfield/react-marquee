@@ -105,7 +105,7 @@ function ReactCodeBlock({ code }: { code: string }) {
 function App() {
   return (
     <div className='bg-[#eee] w-screen min-h-screen'>
-      <div className='max-w-screen-md mx-auto py-6 px-4 space-y-4'>
+      <div className='max-w-(--breakpoint-md) mx-auto py-6 px-4 space-y-4'>
         <div className='flex flex-col items-start sm:flex-row sm:items-center justify-between gap-2'>
           <div>
             <h1 className='text-2xl font-semibold'>Marquee</h1>

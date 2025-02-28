@@ -9,13 +9,15 @@
 </div>
 
 ## Advantages over alternatives
+
 - ✅ Built for React 18/19
 - ✅ Supports (but doesn't require) Tailwind CSS - Won't affect any of your other CSS
 - ✅ Includes ARIA attributes
 - ✅ Built for performance
 
 ## Demo
-[Web Demo]((URL_ADDRESS-beautiful-marquee.vercel.app/))
+
+[Web Demo](<(URL_ADDRESS-beautiful-marquee.vercel.app/)>)
 
 ## Installation
 
@@ -57,4 +59,5 @@ This lib made specifically for tailwind users, however you can use normal css cl
 
 ## License
 
-Released under [MIT](/LICENSE) by [Elliot Padfield](https://github.com/elliotpadfield).This project is a fork of marquee by [@devnomic](https://github.com/devnomic).
+This project is a fork of marquee by [@devnomic](https://github.com/devnomic), licensed under [MIT](/LICENSE).
+Modifications and enhancements © 2025 [Elliot Padfield](https://github.com/elliotpadfield), also under the [MIT License](/LICENSE).

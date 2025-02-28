@@ -18,11 +18,11 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.tsx
-var src_exports = {};
-__export(src_exports, {
+var index_exports = {};
+__export(index_exports, {
   Marquee: () => Marquee
 });
-module.exports = __toCommonJS(src_exports);
+module.exports = __toCommonJS(index_exports);
 var import_react = require("react");
 
 // src/lib/utils.ts
@@ -76,11 +76,9 @@ var styles = {
   `
 };
 function injectStyles() {
-  if (typeof document === "undefined")
-    return;
+  if (typeof document === "undefined") return;
   const styleId = "react-beautiful-marquee-styles";
-  if (document.getElementById(styleId))
-    return;
+  if (document.getElementById(styleId)) return;
   const styleElement = document.createElement("style");
   styleElement.id = styleId;
   styleElement.textContent = `${styles.keyframes}

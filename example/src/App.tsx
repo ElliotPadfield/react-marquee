@@ -111,7 +111,7 @@ function App() {
           <div>
             <h1 className='text-2xl font-semibold'>Marquee</h1>
             <div className='text-stone-600'>
-              A beautiful marquee component for React.
+              A beautiful marquee component for React 18/19.
             </div>
           </div>
           <div className='flex items-center gap-1'>
@@ -185,14 +185,6 @@ function App() {
               }),
             ]}
           />
-          <div className='text-sm'>
-            or you can skip npm install, and just copy and paste the source code
-            into your component ala{' '}
-            <a className='underline' href='https://ui.shadcn.com/'>
-              shadcn ui
-            </a>{' '}
-            (don't forget to also copy tailwind config if you do this).
-          </div>
         </div>
         <div className='space-y-1'>
           <h3 className='font-semibold'>Import</h3>

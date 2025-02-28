@@ -2,11 +2,20 @@
 
 # Marquee <br> 🌬️
 
-> A beautiful marquee component for React.
+> A beautiful marquee component for React 18/19.
 
 ![NPM Version](https://img.shields.io/npm/v/react-beautiful-marquee?logo=npm)
 
 </div>
+
+## Advantages over alternatives
+- ✅ Built for React 18/19
+- ✅ Supports (but doesn't require) Tailwind CSS - Won't affect any of your other CSS
+- ✅ Includes ARIA attributes
+- ✅ Built for performance
+
+## Demo
+[Web Demo]((URL_ADDRESS-beautiful-marquee.vercel.app/))
 
 ## Installation
 

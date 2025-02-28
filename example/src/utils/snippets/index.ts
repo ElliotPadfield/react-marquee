@@ -1,8 +1,6 @@
 
 export const codeImport = `
 import { Marquee } from "react-beautiful-marquee";
-// if you copy ala shadcn, no need import css.
-import "react-beautiful-marquee/dist/index.css";
 `;
 
 export const codeExample1 = `

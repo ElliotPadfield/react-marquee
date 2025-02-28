@@ -33,8 +33,9 @@ This library has very few props and self explanatory, you can get it running in 
   direction='left'
   reverse={false}
   pauseOnHover={false}
-  className='' // pass class to change gap or speed
-  innerClassName='' // pass class to change gap or speed
+  speed='normal' // 'slow' (30s), 'normal' (20s), or 'fast' (10s)
+  className='' // pass class to override gap or duration (e.g. [--duration:5s])
+  innerClassName='' // pass class to override gap
 >
   <div>Content 1</div>
   <div>Content 2</div>

@@ -10,6 +10,7 @@ export type MarqueeProps = HTMLAttributes<HTMLDivElement> & {
   fade?: boolean;
   innerClassName?: string;
   numberOfCopies?: number;
+  speed?: "slow" | "normal" | "fast";
 };
 
 export function Marquee({
@@ -21,8 +22,15 @@ export function Marquee({
   className,
   innerClassName,
   numberOfCopies = 2,
+  speed = "normal",
   ...rest
 }: MarqueeProps) {
+  const duration = {
+    slow: "30s",
+    normal: "20s",
+    fast: "10s",
+  }[speed];
+
   return (
     <div
       className={cn(
@@ -31,6 +39,7 @@ export function Marquee({
         className
       )}
       style={{
+        "--duration": duration,
         maskImage: fade
           ? `linear-gradient(${
               direction === "left" ? "to right" : "to bottom"
@@ -41,7 +50,7 @@ export function Marquee({
               direction === "left" ? "to right" : "to bottom"
             }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
           : undefined,
-      }}
+      } as React.CSSProperties}
       {...rest}
     >
       {Array(numberOfCopies)

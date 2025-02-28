@@ -1,8 +1,8 @@
 
 export const codeImport = `
-import { Marquee } from "@devnomic/marquee";
+import { Marquee } from "react-beautiful-marquee";
 // if you copy ala shadcn, no need import css.
-import "@devnomic/marquee/dist/index.css";
+import "react-beautiful-marquee/dist/index.css";
 `;
 
 export const codeExample1 = `
@@ -58,5 +58,39 @@ innerClassName="motion-reduce:animate-none motion-reduce:first:hidden">
   <div>Content 1</div>
   <div>Content 2</div>
   <div>Content 3</div>
+</Marquee>
+`
+
+export const codeExample7 = `
+// Use speed preset props
+// 'slow' (30s), 'normal' (20s), or 'fast' (10s)
+// You can override the duration using the --duration CSS variable
+<Marquee fade={true} speed="fast" className="[--duration:15s]">
+  <div>Content 1</div>
+  <div>Content 2</div>
+  <div>Content 3</div>
+</Marquee>
+`
+
+export const codeExample8 = `
+// Compare different speed presets and custom duration
+// Fast speed (10s)
+<Marquee fade={true} speed="fast">
+  <div>Fast Speed (10s)</div>
+</Marquee>
+
+// Custom duration (15s)
+<Marquee fade={true} speed="fast" className="[--duration:15s]">
+  <div>Custom Speed (15s)</div>
+</Marquee>
+
+// Normal speed (20s) - default
+<Marquee fade={true} speed="normal">
+  <div>Normal Speed (20s)</div>
+</Marquee>
+
+// Slow speed (30s)
+<Marquee fade={true} speed="slow">
+  <div>Slow Speed (30s)</div>
 </Marquee>
 `

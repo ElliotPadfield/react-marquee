@@ -1,6 +1,6 @@
 {
   "name": "react-beautiful-marquee",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A beautiful marquee component for React.",
   "main": "dist/index.js",
   "scripts": {

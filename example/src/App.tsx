@@ -1,13 +1,23 @@
-import { Marquee } from "@devnomic/marquee";
-import "@devnomic/marquee/dist/index.css";
-import CodeBlock from "shiki-code-block-react";
-import { transformerCopyButton } from "@selemondev/shiki-transformer-copy-button";
-import { GithubIcon } from "./components/GithubIcon";
+import { Marquee } from 'react-beautiful-marquee';
+import 'react-beautiful-marquee/dist/index.css';
+import CodeBlock from 'shiki-code-block-react';
+import { transformerCopyButton } from '@selemondev/shiki-transformer-copy-button';
+import { GithubIcon } from './components/GithubIcon';
 import {
   TestimonialCard,
   TestimonialProps,
-} from "./components/TestimonialCard";
-import { codeImport, codeExample1, codeExample2, codeExample3, codeExample4, codeExample5, codeExample6 } from "./utils/snippets";
+} from './components/TestimonialCard';
+import {
+  codeImport,
+  codeExample1,
+  codeExample2,
+  codeExample3,
+  codeExample4,
+  codeExample5,
+  codeExample6,
+  codeExample7,
+  codeExample8,
+} from './utils/snippets';
 
 const shikiTransformerCopyBtnCSSVariables = `
 :root {
@@ -28,63 +38,63 @@ const shikiTransformerCopyBtnCSSVariables = `
       --button-ready-icon-height: 20px;
       --button-success-icon-width: 20px;
       --button-success-icon-height: 20px;
-}`
+}`;
 const testimonials: TestimonialProps[] = [
   {
-    name: "Emily Johnson",
-    title: "Senior Frontend Developer",
-    avatar: "https://i.pravatar.cc/150?img=21",
+    name: 'Emily Johnson',
+    title: 'Senior Frontend Developer',
+    avatar: 'https://i.pravatar.cc/150?img=21',
     content:
       "Marquee Library has been a game-changer for our TypeScript projects. Its seamless integration and robust features have significantly improved our UI's dynamic capabilities.",
   },
   {
-    name: "Raj Patel",
-    title: "Tech Lead",
-    avatar: "https://i.pravatar.cc/150?img=18",
+    name: 'Raj Patel',
+    title: 'Tech Lead',
+    avatar: 'https://i.pravatar.cc/150?img=18',
     content:
       "I'm thoroughly impressed with Marquee's performance and ease of use. It made implementing complex scrolling texts a breeze, and the support for TypeScript is top-notch.",
   },
   {
-    name: "Sofia Garcia",
-    title: "UI/UX Designer",
-    avatar: "https://i.pravatar.cc/150?img=45",
+    name: 'Sofia Garcia',
+    title: 'UI/UX Designer',
+    avatar: 'https://i.pravatar.cc/150?img=45',
     content:
-      "As a designer, I appreciate how Marquee enhances the visual appeal of our applications. The flexibility it offers in styling and animation is fantastic.",
+      'As a designer, I appreciate how Marquee enhances the visual appeal of our applications. The flexibility it offers in styling and animation is fantastic.',
   },
   {
-    name: "John Mack",
-    title: "Full Stack Developer",
-    avatar: "https://i.pravatar.cc/150?img=60",
+    name: 'John Mack',
+    title: 'Full Stack Developer',
+    avatar: 'https://i.pravatar.cc/150?img=60',
     content:
-      "Integrating Marquee into our full-stack TypeScript projects has been incredibly efficient. Its compatibility and ease of customization are ideal for our diverse project needs.",
+      'Integrating Marquee into our full-stack TypeScript projects has been incredibly efficient. Its compatibility and ease of customization are ideal for our diverse project needs.',
   },
   {
-    name: "Isabella Smith",
-    title: "Project Manager",
-    avatar: "https://i.pravatar.cc/150?img=32",
+    name: 'Isabella Smith',
+    title: 'Project Manager',
+    avatar: 'https://i.pravatar.cc/150?img=32',
     content:
       "Marquee Library has consistently delivered beyond our expectations. It's not just a tool; it's an asset that enhances productivity and creativity in our TypeScript applications.",
   },
 ];
 
 function Logo({ src }: { src: string }) {
-  return <img src={src} className="h-16 inline-block" />;
+  return <img src={src} className='h-16 inline-block' />;
 }
 
 function ReactCodeBlock({ code }: { code: string }) {
   return (
     <CodeBlock
       code={code}
-      lang="javascript"
+      lang='javascript'
       theme={{
-        light: "vitesse-light",
-        dark: "vitesse-dark",
+        light: 'vitesse-light',
+        dark: 'vitesse-dark',
       }}
       transformers={[
         transformerCopyButton({
           cssVariables: shikiTransformerCopyBtnCSSVariables,
           duration: 2000,
-          display: "ready",
+          display: 'ready',
           successIcon: `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgba(128,128,128,1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3Cpath d='m9 14 2 2 4-4'/%3E%3C/svg%3E`,
           copyIcon: `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgba(128,128,128,1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3C/svg%3E`,
         }),
@@ -95,45 +105,45 @@ function ReactCodeBlock({ code }: { code: string }) {
 
 function App() {
   return (
-    <div className="bg-[#eee] w-screen min-h-screen">
-      <div className="max-w-screen-md mx-auto py-6 px-4 space-y-4">
-        <div className="flex flex-col items-start sm:flex-row sm:items-center justify-between gap-2">
+    <div className='bg-[#eee] w-screen min-h-screen'>
+      <div className='max-w-screen-md mx-auto py-6 px-4 space-y-4'>
+        <div className='flex flex-col items-start sm:flex-row sm:items-center justify-between gap-2'>
           <div>
-            <h1 className="text-2xl font-semibold">Marquee</h1>
-            <div className="text-stone-600">
+            <h1 className='text-2xl font-semibold'>Marquee</h1>
+            <div className='text-stone-600'>
               A beautiful marquee component for React.
             </div>
           </div>
-          <div className="flex items-center gap-1">
+          <div className='flex items-center gap-1'>
             <a
-              href="https://x.com/devnomic"
-              target="_blank"
-              className="bg-black text-xs font-semibold text-white px-2.5 py-1 rounded-md inline-flex items-center hover:bg-black/80 transition-colors"
+              href='https://x.com/elliotpadfield'
+              target='_blank'
+              className='bg-black text-xs font-semibold text-white px-2.5 py-1 rounded-md inline-flex items-center hover:bg-black/80 transition-colors'
             >
               <svg
-                className="size-4 mr-1 shrink-0"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+                className='size-4 mr-1 shrink-0'
+                viewBox='0 0 24 24'
+                xmlns='http://www.w3.org/2000/svg'
               >
                 <path
-                  fill="currentColor"
-                  d="M8 2H1l8.26 11.015L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886zm9 18L5 4h2l12 16z"
+                  fill='currentColor'
+                  d='M8 2H1l8.26 11.015L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886zm9 18L5 4h2l12 16z'
                 />
               </svg>
-              @devnomic
+              @elliotpadfield
             </a>
             <a
-              href="https://github.com/devnomic/marquee"
-              target="_blank"
-              className="bg-black text-xs font-semibold text-white px-2.5 py-1 rounded-md inline-flex items-center hover:bg-black/80 transition-colors"
+              href='https://github.com/elliotpadfield/react-marquee'
+              target='_blank'
+              className='bg-black text-xs font-semibold text-white px-2.5 py-1 rounded-md inline-flex items-center hover:bg-black/80 transition-colors'
             >
-              <GithubIcon className="size-4 mr-1" />
+              <GithubIcon className='size-4 mr-1' />
               Github
             </a>
           </div>
         </div>
-        <div className="py-4">
-          <Marquee className="py-2" fade={true}>
+        <div className='py-4'>
+          <Marquee className='py-2' fade={true}>
             {testimonials.map((testimonial, i) => (
               <TestimonialCard
                 key={i}
@@ -144,7 +154,7 @@ function App() {
               />
             ))}
           </Marquee>
-          <Marquee className="py-2" reverse={true} fade={true}>
+          <Marquee className='py-2' reverse={true} fade={true}>
             {testimonials.map((testimonial, i) => (
               <TestimonialCard
                 key={i}
@@ -156,42 +166,42 @@ function App() {
             ))}
           </Marquee>
         </div>
-        <div className="space-y-1">
-          <h2 className="text-lg font-semibold">Installation</h2>
+        <div className='space-y-1'>
+          <h2 className='text-lg font-semibold'>Installation</h2>
           <CodeBlock
-            code={"npm install @devnomic/marquee"}
-            lang="bash"
+            code={'npm install @devnomic/marquee'}
+            lang='bash'
             theme={{
-              light: "vitesse-light",
-              dark: "vitesse-dark",
+              light: 'vitesse-light',
+              dark: 'vitesse-dark',
             }}
             transformers={[
               transformerCopyButton({
                 cssVariables: shikiTransformerCopyBtnCSSVariables,
                 duration: 2000,
-                display: "ready",
+                display: 'ready',
                 successIcon: `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgba(128,128,128,1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3Cpath d='m9 14 2 2 4-4'/%3E%3C/svg%3E`,
                 copyIcon: `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='rgba(128,128,128,1)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Crect width='8' height='4' x='8' y='2' rx='1' ry='1'/%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'/%3E%3C/svg%3E`,
               }),
             ]}
           />
-          <div className="text-sm">
+          <div className='text-sm'>
             or you can skip npm install, and just copy and paste the source code
-            into your component ala{" "}
-            <a className="underline" href="https://ui.shadcn.com/">
+            into your component ala{' '}
+            <a className='underline' href='https://ui.shadcn.com/'>
               shadcn ui
-            </a>{" "}
+            </a>{' '}
             (don't forget to also copy tailwind config if you do this).
           </div>
         </div>
-        <div className="space-y-1">
-          <h3 className="font-semibold">Import</h3>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Import</h3>
           <ReactCodeBlock code={codeImport} />
         </div>
-        <hr className="border-stone-200" />
-        <div className="space-y-1">
-          <h3 className="font-semibold">Fade</h3>
-          <Marquee className="py-4" fade={true}>
+        <hr className='border-stone-200' />
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Fade</h3>
+          <Marquee className='py-4' fade={true}>
             {testimonials.map((testimonial, i) => (
               <TestimonialCard
                 key={i}
@@ -203,14 +213,14 @@ function App() {
             ))}
           </Marquee>
         </div>
-        <div className="space-y-1">
-          <h3 className="font-semibold">Code</h3>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Code</h3>
           <ReactCodeBlock code={codeExample1} />
         </div>
-        <hr className="border-stone-200" />
-        <div className="space-y-1">
-          <h3 className="font-semibold">Reverse direction</h3>
-          <Marquee className="py-4" reverse={true} fade={true}>
+        <hr className='border-stone-200' />
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Reverse direction</h3>
+          <Marquee className='py-4' reverse={true} fade={true}>
             {testimonials.map((testimonial, i) => (
               <TestimonialCard
                 key={i}
@@ -222,30 +232,30 @@ function App() {
             ))}
           </Marquee>
         </div>
-        <div className="space-y-1">
-          <h3 className="font-semibold">Code</h3>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Code</h3>
           <ReactCodeBlock code={codeExample2} />
         </div>
-        <hr className="border-stone-200" />
+        <hr className='border-stone-200' />
         <div>
-          <h3 className="font-semibold">Pause on hover</h3>
+          <h3 className='font-semibold'>Pause on hover</h3>
           <Marquee pauseOnHover={true} fade={true}>
-            <Logo src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" />
+            <Logo src='https://www.vectorlogo.zone/logos/google/google-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg' />
           </Marquee>
         </div>
         <div>
-          <h3 className="font-semibold">Code</h3>
+          <h3 className='font-semibold'>Code</h3>
           <ReactCodeBlock code={codeExample3} />
         </div>
-        <hr className="border-stone-200" />
-        <div className="space-y-1">
-          <h3 className="font-semibold">Vertical</h3>
-          <div className="flex justify-center">
-            <Marquee className="h-[400px]" direction="up" fade={true}>
+        <hr className='border-stone-200' />
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Vertical</h3>
+          <div className='flex justify-center'>
+            <Marquee className='h-[400px]' direction='up' fade={true}>
               {testimonials.map((testimonial, i) => (
                 <TestimonialCard
                   key={i}
@@ -258,36 +268,36 @@ function App() {
             </Marquee>
           </div>
         </div>
-        <div className="space-y-1">
-          <h3 className="font-semibold">Code</h3>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Code</h3>
           <ReactCodeBlock code={codeExample4} />
         </div>
-        <hr className="border-stone-200" />
-        <div className="space-y-1">
-          <h3 className="font-semibold">Custom gap and speed</h3>
+        <hr className='border-stone-200' />
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Custom gap and speed</h3>
           <Marquee
-            className="gap-[3rem] [--duration:5s]"
-            innerClassName="gap-[3rem] [--gap:3rem]"
+            className='gap-[3rem] [--duration:5s]'
+            innerClassName='gap-[3rem] [--gap:3rem]'
             fade={true}
           >
-            <Logo src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/apple/apple-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg" />
-            <Logo src="https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg" />
+            <Logo src='https://www.vectorlogo.zone/logos/google/google-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' />
+            <Logo src='https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg' />
           </Marquee>
         </div>
-        <div className="space-y-1">
-          <h3 className="font-semibold">Code</h3>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Code</h3>
           <ReactCodeBlock code={codeExample5} />
         </div>
-        <hr className="border-stone-200" />
-        <div className="space-y-1">
-          <h3 className="font-semibold">Reduced motion</h3>
+        <hr className='border-stone-200' />
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Reduced motion</h3>
           <div>Disable animation when user device prefers reduced motion.</div>
           <Marquee
-            className="py-4 motion-reduce:overflow-auto"
-            innerClassName="motion-reduce:animate-none motion-reduce:first:hidden"
+            className='py-4 motion-reduce:overflow-auto'
+            innerClassName='motion-reduce:animate-none motion-reduce:first:hidden'
           >
             {testimonials.map((testimonial, i) => (
               <TestimonialCard
@@ -300,9 +310,91 @@ function App() {
             ))}
           </Marquee>
         </div>
-        <div className="space-y-1">
-          <h3 className="font-semibold">Code</h3>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Code</h3>
           <ReactCodeBlock code={codeExample6} />
+        </div>
+        <hr className='border-stone-200' />
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Speed presets</h3>
+          <div>
+            Use the speed prop to control animation speed with presets. You can
+            also override any preset with a custom duration using CSS variables.
+          </div>
+          <Marquee className='py-4' fade={true} speed='fast'>
+            {testimonials.map((testimonial, i) => (
+              <TestimonialCard
+                key={i}
+                name={testimonial.name}
+                title={testimonial.title}
+                avatar={testimonial.avatar}
+                content={testimonial.content}
+              />
+            ))}
+          </Marquee>
+        </div>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Code</h3>
+          <ReactCodeBlock code={codeExample7} />
+        </div>
+        <hr className='border-stone-200' />
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Speed comparison</h3>
+          <div>
+            Compare the different speed presets: fast (10s), normal (20s), and
+            slow (30s). You can also set a custom duration by overriding with
+            CSS variables.
+          </div>
+          <div className='space-y-4 py-2'>
+            <div>
+              <div className='text-sm font-medium mb-1'>Fast speed (10s)</div>
+              <Marquee fade={true} speed='fast'>
+                <Logo src='https://www.vectorlogo.zone/logos/google/google-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg' />
+              </Marquee>
+            </div>
+            <div>
+              <div className='text-sm font-medium mb-1'>
+                Custom speed (15s) - overriding fast preset
+              </div>
+              <Marquee fade={true} speed='fast' className='[--duration:15s]'>
+                <Logo src='https://www.vectorlogo.zone/logos/google/google-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg' />
+              </Marquee>
+            </div>
+            <div>
+              <div className='text-sm font-medium mb-1'>
+                Normal speed (20s) - default
+              </div>
+              <Marquee fade={true} speed='normal'>
+                <Logo src='https://www.vectorlogo.zone/logos/google/google-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg' />
+              </Marquee>
+            </div>
+            <div>
+              <div className='text-sm font-medium mb-1'>Slow speed (30s)</div>
+              <Marquee fade={true} speed='slow'>
+                <Logo src='https://www.vectorlogo.zone/logos/google/google-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg' />
+                <Logo src='https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg' />
+              </Marquee>
+            </div>
+          </div>
+        </div>
+        <div className='space-y-1'>
+          <h3 className='font-semibold'>Code</h3>
+          <ReactCodeBlock code={codeExample8} />
         </div>
       </div>
     </div>

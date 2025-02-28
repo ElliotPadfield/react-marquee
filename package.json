@@ -1,12 +1,17 @@
 {
   "name": "react-beautiful-marquee",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A beautiful marquee component for React.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsup",
     "yalc": "tsup && yalc push"
   },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "keywords": [],
   "author": "Elliot Padfield <elliot@elliotpadfield.com> (https://github.com/elliotpadfield)",
   "contributors": [

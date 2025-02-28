@@ -11,6 +11,10 @@ export type MarqueeProps = HTMLAttributes<HTMLDivElement> & {
   innerClassName?: string;
   numberOfCopies?: number;
   speed?: "slow" | "normal" | "fast";
+  /**
+   * Optional label for the marquee for accessibility
+   */
+  ariaLabel?: string;
 };
 
 export function Marquee({
@@ -23,6 +27,7 @@ export function Marquee({
   innerClassName,
   numberOfCopies = 2,
   speed = "normal",
+  ariaLabel,
   ...rest
 }: MarqueeProps) {
   const duration = {
@@ -38,6 +43,10 @@ export function Marquee({
         direction === "left" ? "flex-row" : "flex-col",
         className
       )}
+      role="region"
+      aria-roledescription="marquee"
+      aria-label={ariaLabel || "Scrolling content"}
+      aria-live="polite"
       style={{
         "--duration": duration,
         maskImage: fade

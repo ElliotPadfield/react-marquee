@@ -1,6 +1,6 @@
-import { HTMLAttributes, ReactNode } from "react";
-import "./global.css";
+import { HTMLAttributes, ReactNode, useEffect } from "react";
 import { cn } from "./lib/utils";
+import { injectStyles } from "./styles";
 
 export type MarqueeProps = HTMLAttributes<HTMLDivElement> & {
   /**
@@ -74,6 +74,10 @@ export function Marquee({
   ariaLabel,
   ...rest
 }: MarqueeProps) {
+  useEffect(() => {
+    injectStyles();
+  }, []);
+
   const duration = {
     slow: "30s",
     normal: "20s",
@@ -83,8 +87,10 @@ export function Marquee({
   return (
     <div
       className={cn(
-        "group flex gap-[1rem] overflow-hidden [contain:content] [transform:translateZ(0)] [backface-visibility:hidden]",
+        "marquee-container",
         direction === "left" ? "flex-row" : "flex-col",
+        reverse && "marquee-reverse",
+        pauseOnHover && "marquee-pause",
         className
       )}
       role="region"
@@ -94,14 +100,10 @@ export function Marquee({
       style={{
         "--duration": duration,
         maskImage: fade
-          ? `linear-gradient(${
-              direction === "left" ? "to right" : "to bottom"
-            }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
+          ? `linear-gradient(${direction === "left" ? "to right" : "to bottom"}, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
           : undefined,
         WebkitMaskImage: fade
-          ? `linear-gradient(${
-              direction === "left" ? "to right" : "to bottom"
-            }, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
+          ? `linear-gradient(${direction === "left" ? "to right" : "to bottom"}, transparent 0%, rgba(0, 0, 0, 1.0) 10%, rgba(0, 0, 0, 1.0) 90%, transparent 100%)`
           : undefined,
       } as React.CSSProperties}
       {...rest}
@@ -112,12 +114,8 @@ export function Marquee({
           <div
             key={i}
             className={cn(
-              "flex justify-around gap-[1rem] [--gap:1rem] shrink-0 will-change-transform",
-              direction === "left"
-                ? "animate-marquee-left flex-row"
-                : "animate-marquee-up flex-col",
-              pauseOnHover && "group-hover:[animation-play-state:paused]",
-              reverse && "direction-reverse",
+              "marquee-content",
+              direction === "left" ? "marquee-left flex-row" : "marquee-up flex-col",
               innerClassName
             )}
           >

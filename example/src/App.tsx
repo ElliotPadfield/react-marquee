@@ -169,7 +169,7 @@ function App() {
         <div className='space-y-1'>
           <h2 className='text-lg font-semibold'>Installation</h2>
           <CodeBlock
-            code={'npm install @devnomic/marquee'}
+            code={'npm install react-beautiful-marquee'}
             lang='bash'
             theme={{
               light: 'vitesse-light',

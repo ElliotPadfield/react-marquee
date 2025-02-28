@@ -351,7 +351,12 @@ function App() {
               <div className='text-sm font-medium mb-1'>
                 Custom speed (15s) - overriding fast preset
               </div>
-              <Marquee fade={true} speed='fast' className='[--duration:15s]'>
+              <Marquee 
+                fade={true} 
+                speed='fast' 
+                className=''
+                innerClassName='[--duration:15s]'
+              >
                 <Logo src='https://www.vectorlogo.zone/logos/google/google-ar21.svg' />
                 <Logo src='https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg' />
                 <Logo src='https://www.vectorlogo.zone/logos/apple/apple-ar21.svg' />

@@ -29,10 +29,8 @@ npm install react-beautiful-marquee
 
 ```ts
 import { Marquee } from 'react-beautiful-marquee';
-import 'react-beautiful-marquee/dist/index.css';
 ```
 
-or you can skip npm install, and just copy and paste the source code into your component ala shadcn ui (don't forget to also copy tailwind config if you do this).
 
 ## Usage
 
@@ -45,8 +43,8 @@ This library has very few props and self explanatory, you can get it running in 
   reverse={false}
   pauseOnHover={false}
   speed='normal' // 'slow' (30s), 'normal' (20s), or 'fast' (10s)
-  className='' // pass class to override gap or duration (e.g. [--duration:5s])
-  innerClassName='' // pass class to override gap
+  className='' // pass class to override gap or add other styling
+  innerClassName='' //  pass class to override duration (e.g. [--duration:5s])
 >
   <div>Content 1</div>
   <div>Content 2</div>

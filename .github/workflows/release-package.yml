@@ -1,8 +1,9 @@
 name: Release Package
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build-and-publish:
@@ -27,7 +28,7 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          
+
       # Add GitHub Packages publishing
       - name: Setup Node.js for GitHub Packages
         uses: actions/setup-node@v4

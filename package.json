@@ -1,6 +1,6 @@
 {
-  "name": "@devnomic/marquee",
-  "version": "1.0.3",
+  "name": "react-beautiful-marquee",
+  "version": "1.0.4",
   "description": "A beautiful marquee component for React.",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,14 @@
     "yalc": "tsup && yalc push"
   },
   "keywords": [],
-  "author": "Erick Hartanto",
+  "author": "Elliot Padfield <elliot@elliotpadfield.com> (https://github.com/elliotpadfield)",
+  "contributors": [
+    "Devnomic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElliotPadfield/react-marquee.git"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react": ">=18.0.0",

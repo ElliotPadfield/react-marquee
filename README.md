@@ -2,23 +2,23 @@
 
 # Marquee <br> 🌬️
 
-> A beautiful marquee components for React.
+> A beautiful marquee component for React.
 
-![NPM Version](https://img.shields.io/npm/v/%40devnomic%2Fmarquee?logo=npm)
+![NPM Version](https://img.shields.io/npm/v/react-beautiful-marquee?logo=npm)
 
 </div>
 
 ## Installation
 
 ```bash
-npm install @devnomic/marquee
+npm install react-beautiful-marquee
 ```
 
 ## Import
 
 ```ts
-import { Marquee } from "@devnomic/marquee";
-import "@devnomic/marquee/dist/index.css";
+import { Marquee } from 'react-beautiful-marquee';
+import 'react-beautiful-marquee/dist/index.css';
 ```
 
 or you can skip npm install, and just copy and paste the source code into your component ala shadcn ui (don't forget to also copy tailwind config if you do this).
@@ -30,11 +30,11 @@ This library has very few props and self explanatory, you can get it running in 
 ```ts
 <Marquee
   fade={true}
-  direction="left"
+  direction='left'
   reverse={false}
   pauseOnHover={false}
-  className="" // pass class to change gap or speed
-  innerClassName="" // pass class to change gap or speed
+  className='' // pass class to change gap or speed
+  innerClassName='' // pass class to change gap or speed
 >
   <div>Content 1</div>
   <div>Content 2</div>
@@ -47,4 +47,4 @@ This lib made specifically for tailwind users, however you can use normal css cl
 
 ## License
 
-Released under [MIT](/LICENSE) by [@devnomic](https://github.com/devnomic).
+Released under [MIT](/LICENSE) by [Elliot Padfield](https://github.com/elliotpadfield).This project is a fork of marquee by [@devnomic](https://github.com/devnomic).

@@ -17,7 +17,7 @@
 
 ## Demo
 
-[Web Demo](<(https://beautiful-react-marquee-liard.vercel.app/)>)
+[Web Demo](https://beautiful-react-marquee-liard.vercel.app/)
 
 ## Installation
 

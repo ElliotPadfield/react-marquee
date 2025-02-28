@@ -83,7 +83,7 @@ export function Marquee({
   return (
     <div
       className={cn(
-        "group flex gap-[1rem] overflow-hidden",
+        "group flex gap-[1rem] overflow-hidden [contain:content] [transform:translateZ(0)] [backface-visibility:hidden]",
         direction === "left" ? "flex-row" : "flex-col",
         className
       )}
@@ -112,7 +112,7 @@ export function Marquee({
           <div
             key={i}
             className={cn(
-              "flex justify-around gap-[1rem] [--gap:1rem] shrink-0",
+              "flex justify-around gap-[1rem] [--gap:1rem] shrink-0 will-change-transform",
               direction === "left"
                 ? "animate-marquee-left flex-row"
                 : "animate-marquee-up flex-col",

@@ -1,5 +1,4 @@
 import { Marquee } from 'react-beautiful-marquee';
-import 'react-beautiful-marquee/dist/index.css';
 import CodeBlock from 'shiki-code-block-react';
 import { transformerCopyButton } from '@selemondev/shiki-transformer-copy-button';
 import { GithubIcon } from './components/GithubIcon';
